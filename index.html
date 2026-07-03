@@ -32,7 +32,28 @@ DIV,UL,OL /* Left */
  margin-bottom: 0px;
 }
 </style>
+/*------------------disable mouse
+<meta charset="utf-8">
+  <title>Disable clicks except links (CSS)</title>
+  <style>
+    /* when .no-clicks is on body, all pointer activity is ignored */
+    body.no-clicks * {
+      pointer-events: none !important;
+    }
+    /* re-enable links (and their children) */
+    body.no-clicks a,
+    body.no-clicks a * {
+      pointer-events: auto !important;
+    }
 
+    /* Optional: re-enable specific controls too:
+       body.no-clicks input, body.no-clicks button { pointer-events:auto; }
+    */
+  </style>
+
+/*------------------disable mouse
+
+ 
 </head>
 <body>
 <div id="image1" style="position:absolute; overflow:hidden; left:58px; top:49px; width:745px; height:406px; z-index:0"><img src="images/GG_Image_tc1statc1statc1s.png" alt="" title="" border=0 width=745 height=406></div>
