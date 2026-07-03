@@ -52,7 +52,16 @@ DIV,UL,OL /* Left */
   </style>
 
 /*------------------disable mouse
-
+<script>
+  // run as soon as scripts load (put near the end of <body>)
+  document.addEventListener('pointerdown', function (e) {
+    // only block mouse left-button presses
+    if (e.pointerType === 'mouse' && e.button === 0) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+    }
+  }, true); // capture phase so this runs before page handlers
+</script>
  
 </head>
 <body>
